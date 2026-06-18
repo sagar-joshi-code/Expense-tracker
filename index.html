@@ -10,12 +10,50 @@
     <!-- header -->
     <div>
       <h1 class="font-bold text-3xl pl-150 mt-10">💰 Expense Tracker</h1>
-      <p class="pl-146 mt-3 text-1xl">Manage your money smarter</p>
+      <p class="pl-150 mt-3 text-1xl">Manage your money smarter</p>
     </div>
     <!-- header-ends -->
-    <div class="bg-blue-600 w-96">
-      <p class="pl-146 mt-3 text-1xl">Total Balance</p>
-      <p class="pl-146 mt-3 text-1xl">RS. 25,000</p>
+
+    <!-- Balance card -->
+    <div
+      class="bg-blue-600 text-white w-230 mt-4 ml-146 mt-6 h-auto rounded-2xl"
+    >
+      <p class="pt-4 pl-4">Total Balance</p>
+      <h2 class="pt-3 pb-4 pl-4 font-bold text-3xl">RS. 25,000</h2>
     </div>
+    <!-- Balance card-ends -->
+
+    <!-- Income expense -->
+    <div class="flex ml-146 gap-4 mt-4">
+      <div class="bg-white p-3 w-115 rounded-2xl shadow-lg">
+        <p class="text-gray-500 pl-4">Income</p>
+        <h3 class="text-green-500 font-bold text-3xl pb-2 pl-4">RS. 20,000</h3>
+      </div>
+      <div class="bg-white w-110 rounded-2xl shadow-lg">
+        <p class="text-gray-500 pt-4 pl-4">Expense</p>
+        <h3 class="text-red-500 font-bold text-3xl pb-2 pl-4">RS. 5000</h3>
+      </div>
+    </div>
+    <!-- Income expense-ends -->
+
+    <!-- Add transaction and recent transaction -->
+    <div class="flex ml-146 gap-4 mt-4">
+      <div>
+        <h3>Add transaction</h3>
+        <form>
+          <input type="text" placeholder="Transaction Title" />
+          <input type="number" placeholder="Amount" />
+          <select>
+            <option>Select Category</option>
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Shopping</option>
+            <option>Salary</option>
+          </select>
+        </form>
+      </div>
+      <div></div>
+    </div>
+    <!-- Add transaction and recent transaction-ends -->
   </body>
 </html>
