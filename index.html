@@ -6,54 +6,133 @@
     <title>Expense Tracker</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
+
   <body class="bg-slate-100">
-    <!-- header -->
-    <div>
-      <h1 class="font-bold text-3xl pl-150 mt-10">💰 Expense Tracker</h1>
-      <p class="pl-150 mt-3 text-1xl">Manage your money smarter</p>
-    </div>
-    <!-- header-ends -->
+    <div class="max-w-5xl mx-auto p-6">
+      <!-- Header -->
+      <div class="mb-8">
+        <h1 class="font-bold text-4xl text-slate-800">💰 Expense Tracker</h1>
 
-    <!-- Balance card -->
-    <div
-      class="bg-blue-600 text-white w-230 mt-4 ml-146 mt-6 h-auto rounded-2xl"
-    >
-      <p class="pt-4 pl-4">Total Balance</p>
-      <h2 class="pt-3 pb-4 pl-4 font-bold text-3xl">RS. 25,000</h2>
-    </div>
-    <!-- Balance card-ends -->
+        <p class="text-slate-500 mt-2">Manage your money smarter</p>
+      </div>
+      <!-- Header Ends -->
 
-    <!-- Income expense -->
-    <div class="flex ml-146 gap-4 mt-4">
-      <div class="bg-white p-3 w-115 rounded-2xl shadow-lg">
-        <p class="text-gray-500 pl-4">Income</p>
-        <h3 class="text-green-500 font-bold text-3xl pb-2 pl-4">RS. 20,000</h3>
-      </div>
-      <div class="bg-white w-110 rounded-2xl shadow-lg">
-        <p class="text-gray-500 pt-4 pl-4">Expense</p>
-        <h3 class="text-red-500 font-bold text-3xl pb-2 pl-4">RS. 5000</h3>
-      </div>
-    </div>
-    <!-- Income expense-ends -->
+      <!-- Balance Card -->
+      <div
+        class="bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-3xl shadow-xl p-8 mb-6"
+      >
+        <p class="text-lg opacity-90">Total Balance</p>
 
-    <!-- Add transaction and recent transaction -->
-    <div class="flex ml-146 gap-4 mt-4">
-      <div>
-        <h3>Add transaction</h3>
-        <form>
-          <input type="text" placeholder="Transaction Title" />
-          <input type="number" placeholder="Amount" />
-          <select>
-            <option>Select Category</option>
-            <option>Food</option>
-            <option>Transport</option>
-            <option>Shopping</option>
-            <option>Salary</option>
-          </select>
-        </form>
+        <h2 class="text-5xl font-bold mt-2">Rs. 25,000</h2>
       </div>
-      <div></div>
+      <!-- Balance Card Ends -->
+
+      <!-- Income Expense -->
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-white rounded-3xl shadow-lg p-6 border">
+          <p class="text-slate-500">Income</p>
+
+          <h3 class="text-green-600 font-bold text-3xl mt-2">Rs. 20,000</h3>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-lg p-6 border">
+          <p class="text-slate-500">Expense</p>
+
+          <h3 class="text-red-600 font-bold text-3xl mt-2">Rs. 5,000</h3>
+        </div>
+      </div>
+      <!-- Income Expense Ends -->
+
+      <!-- Add Transaction + Recent Transactions -->
+      <div class="grid lg:grid-cols-2 gap-6">
+        <!-- Add Transaction -->
+        <div class="bg-white rounded-3xl shadow-lg p-6">
+          <h3 class="text-2xl font-semibold mb-5">Add Transaction</h3>
+
+          <form class="space-y-4">
+            <input
+              type="text"
+              placeholder="Transaction Title"
+              class="w-full border border-slate-300 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500"
+            />
+
+            <input
+              type="number"
+              placeholder="Amount"
+              class="w-full border border-slate-300 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500"
+            />
+
+            <select
+              class="w-full border border-slate-300 rounded-xl p-3 outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option>Select Category</option>
+              <option>Food</option>
+              <option>Transport</option>
+              <option>Shopping</option>
+              <option>Salary</option>
+            </select>
+
+            <div class="flex gap-6">
+              <label class="flex items-center gap-2">
+                <input type="radio" name="type" />
+                Income
+              </label>
+
+              <label class="flex items-center gap-2">
+                <input type="radio" name="type" />
+                Expense
+              </label>
+            </div>
+
+            <button
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-medium transition"
+            >
+              Add Transaction
+            </button>
+          </form>
+        </div>
+        <!-- Add Transaction Ends -->
+
+        <!-- Recent Transactions -->
+        <div class="bg-white rounded-3xl shadow-lg p-6">
+          <h2 class="text-2xl font-semibold mb-5">Recent Transactions</h2>
+
+          <div class="space-y-3">
+            <div
+              class="flex justify-between items-center p-3 rounded-xl hover:bg-slate-50"
+            >
+              <span>Salary</span>
+
+              <span class="font-semibold text-green-600"> + Rs.20,000 </span>
+            </div>
+
+            <div
+              class="flex justify-between items-center p-3 rounded-xl hover:bg-slate-50"
+            >
+              <span>Food</span>
+
+              <span class="font-semibold text-red-600"> - Rs.500 </span>
+            </div>
+
+            <div
+              class="flex justify-between items-center p-3 rounded-xl hover:bg-slate-50"
+            >
+              <span>Bus Fare</span>
+
+              <span class="font-semibold text-red-600"> - Rs.50 </span>
+            </div>
+
+            <div
+              class="flex justify-between items-center p-3 rounded-xl hover:bg-slate-50"
+            >
+              <span>Shopping</span>
+
+              <span class="font-semibold text-red-600"> - Rs.1200 </span>
+            </div>
+          </div>
+        </div>
+        <!-- Recent Transactions Ends -->
+      </div>
     </div>
-    <!-- Add transaction and recent transaction-ends -->
   </body>
 </html>
