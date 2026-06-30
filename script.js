@@ -1,27 +1,23 @@
-//storing value
+//targetting element
+let getTitle = document.getElementById("title");
+let getAmount = document.getElementById("amount");
+let getCategory = document.getElementById("category");
+let addBtn = document.getElementById("addBtn");
+let transactionList = document.getElementById("transactionList");
+
+//store values
 let transactions = [];
 
-let getAddBtn = document.getElementById("addBtn");
-getAddBtn.addEventListener("click", (e) => {
+//adding event listner in addBtn
+addBtn.addEventListener("click", (e) => {
   e.preventDefault();
-//   console.log(e);
+  let getType = document.querySelector('input[name="type"]:checked');
 
-  //get value
-  let getTitle = document.getElementById("title").value;
-  let getAmount = document.getElementById("amount").value;
-  let getCategory = document.getElementById("category").value;
-  let getType = document.querySelector('input[name="type"]:checked').value;
-  //   console.log(getTitle);
-  //   console.log(getAmount);
-  //   console.log(getCategory);
-  //   console.log(getType);
-
-  //make transaction object
   let transaction = {
-    title: getTitle,
-    amount: getAmount,
-    category: getCategory,
-    type: getType,
+    title: getTitle.value,
+    amount: getAmount.value,
+    category: getCategory.value,
+    type: getType.value,
   };
   transactions.push(transaction);
   console.log(transactions);
