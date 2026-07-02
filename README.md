@@ -1,7 +1,19 @@
 # 💰 Expense Tracker App
 
-A simple Expense Tracker built using **HTML, CSS (Tailwind), and Vanilla JavaScript**.  
-This project helps users track their income, expenses, and balance in real time.
+A simple and interactive Expense Tracker built using **HTML, CSS (Tailwind), and Vanilla JavaScript**.  
+This project helps users manage income, expenses, and balance with real-time updates and persistent storage.
+
+---
+
+## 🚀 Live Demo
+
+👉 https://expense-tracker-32.vercel.app/
+
+---
+
+## 📷 Preview
+
+![Expense Tracker Screenshot](screenshot.png)
 
 ---
 
@@ -9,28 +21,31 @@ This project helps users track their income, expenses, and balance in real time.
 
 - ➕ Add income and expense transactions
 - 🗑️ Delete transactions
-- 📊 Automatic balance calculation
+- 📊 Real-time balance calculation
 - 💵 Separate income and expense tracking
-- 🔄 Real-time UI updates
+- 💾 Data persistence using localStorage
+- 🔄 Automatic UI updates after every action
 - 🧹 Clear form after adding transaction
 
 ---
 
 ## 🧠 What I Learned
 
-- JavaScript DOM manipulation
+- DOM manipulation in JavaScript
 - Event handling
+- CRUD operations (Create, Read, Delete)
 - Array methods (`push`, `splice`, `forEach`)
-- Dynamic UI rendering
 - State management using arrays
-- Basic CRUD operations (Create, Read, Delete)
+- localStorage for data persistence
+- Clean UI update pattern using `updateUI()`
 
 ---
 
 ## ⚙️ How It Works
 
 ```text
-User Input → Transaction Object → Array Storage → UI Render → Balance Calculation
+User Input → Transaction Object → Array Storage → localStorage → UI Render → Balance Calculation
+
 
 
 🛠️ Tech Stack
@@ -39,9 +54,21 @@ User Input → Transaction Object → Array Storage → UI Render → Balance Ca
 - JavaScript (Vanilla)
 
 
-
+📁 Project Structure
 /index.html
 /script.js
+/style.css
+/screenshot.png
 
-## 📷 Preview
-![Expense Tracker Screenshot](screenshot.png)
+
+Future Improvements
+✏️ Edit transaction feature
+📊 Filter by income/expense
+🎨 Improved UI design
+📱 Mobile responsiveness improvements
+
+
+
+👨‍💻 Author
+
+Built by Sagar Joshi while learning JavaScript and frontend development.
