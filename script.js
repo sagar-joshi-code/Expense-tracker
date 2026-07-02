@@ -27,10 +27,18 @@ addBtn.addEventListener("click", (e) => {
 function showTransaction() {
   let transactionList = document.getElementById("transactionList");
   transactionList.innerHTML = "";
-  transactions.forEach((transaction) => {
+  transactions.forEach((transaction, idx) => {
     const div = document.createElement("div");
     div.innerHTML = `${transaction.title} - ${transaction.amount}`;
+    const delBtn = document.createElement("button");
+    delBtn.innerHTML = "Delete";
+    delBtn.addEventListener("click", () => {
+      transactions.splice(idx, 1);
+      showTransaction()
+      calculateBalance()
+    });
     transactionList.appendChild(div);
+    div.appendChild(delBtn);
   });
 }
 
