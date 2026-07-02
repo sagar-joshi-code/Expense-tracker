@@ -1,11 +1,8 @@
-//targetting element
+let transactions = JSON.parse(localStorage.getItem("transactions")) || []; //targetting element
 let getTitle = document.getElementById("title");
 let getAmount = document.getElementById("amount");
 let getCategory = document.getElementById("category");
 let addBtn = document.getElementById("addBtn");
-
-//store values
-let transactions = [];
 
 //adding event listner in addBtn
 addBtn.addEventListener("click", (e) => {
@@ -19,8 +16,9 @@ addBtn.addEventListener("click", (e) => {
     type: getType.value,
   };
   transactions.push(transaction);
-  showTransaction();
-  calculateBalance();
+  // save to localStorage
+  localStorage.setItem("transactions", JSON.stringify(transactions));
+  updateUI();
   clearForm();
 });
 
@@ -34,8 +32,8 @@ function showTransaction() {
     delBtn.innerHTML = "Delete";
     delBtn.addEventListener("click", () => {
       transactions.splice(idx, 1);
-      showTransaction()
-      calculateBalance()
+      localStorage.setItem("transactions", JSON.stringify(transactions));
+      updateUI();
     });
     transactionList.appendChild(div);
     div.appendChild(delBtn);
@@ -72,3 +70,10 @@ function calculateBalance() {
   let balanceAmt = (document.getElementById("balanceAmt").innerHTML =
     `Rs. ${balance}`);
 }
+
+//fucntion to update ui
+function updateUI() {
+  showTransaction();
+  calculateBalance();
+}
+updateUI();
